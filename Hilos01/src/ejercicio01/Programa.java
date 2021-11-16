@@ -17,7 +17,7 @@ public class Programa {
 		t1.join();
 		
 		System.out.println("");
-		System.out.println("Es es el final del hilo principal");
+		System.out.println("Este es el final del hilo principal");
 
 	}
 
