@@ -14,6 +14,7 @@ public class ListaCompra {
 	public synchronized void anadirProducto(String producto) {
 		
 		this.lista.add(producto);
+		this.notify();
 		
 	}
 	

@@ -6,6 +6,12 @@ public class Principal {
 		
 		ListaCompra lista = new ListaCompra();
 		
+		new Thread(new hiloMonitor(lista)).start();
+		synchronized (lista) {
+				
+			lista.notify();
+		}
+		
 		new Thread(new hiloInsertador(lista, "Tomates")).start();
 		new Thread(new hiloInsertador(lista, "Patatas")).start();
 		new Thread(new hiloInsertador(lista, "Naranjas")).start();
